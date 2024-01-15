@@ -24,19 +24,18 @@ The `script.js` file contains the following logic:
 
 - `output`: A constant variable referencing the HTML element with the id "output."
 - `side1`, `side2`, `side3`: Constants representing the lengths of the triangle sides.
-- `semiperi`, `s`, `area`: Variables used for intermediate and final calculations.
 
 ### Functions
 
-1. **`findSemiPeri(a, b, c)`**: Calculates and returns the semi-perimeter of the triangle.
+1. **`calculateSemiPerimeter(a, b, c)`**: Calculates and returns the semi-perimeter of the triangle.
 
-2. **`calcTriArea(a, b, c)`**: Utilizes `findSemiPeri` to calculate and return the area of the triangle using Heron's formula.
+2. **`calculateTriangleArea(a, b, c)`**: Utilizes `calculateSemiPerimeter` to calculate and return the area of the triangle using Heron's formula.
 
-3. **`outputFn()`**: Populates the HTML element with the id "output" with the calculated triangle area.
+3. **`displayTriangleArea()`**: Populates the HTML element with the id "output" with the calculated triangle area.
 
 ### Execution
 
-The `outputFn()` function is called to display the calculated area on the webpage.
+The `displayTriangleArea()` function is called to display the calculated area on the webpage.
 
 ## Running the Project
 
