@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Exercise: Calculate Triangle Area</title>
+</head>
+
+<body>
+    <h1>JavaScript Exercise: Calculate Triangle Area</h1>
+    <p>Write a JavaScript program to find the area of a triangle where three sides are 5, 6, 7.</p>
+
+    <h2>Output</h2>
+    <div id="output"></div>
+
+    <script>
+        // var
+        const output = document.querySelector("#output");
+        const side1 = 5;
+        const side2 = 6;
+        const side3 = 7;
+        let semiperi;
+        let s;
+        let area;
+
+        // fn
+        function findSemiPeri(a, b, c) {
+            semiperi = (a + b + c) / 2
+            return semiperi;
+        }
+
+        function calcTriArea(a, b, c) {
+            s = findSemiPeri(a, b, c);
+            area = Math.sqrt(s * (s - a) * (s - b) * (s - c));
+            return area;
+        }
+
+        function outputFn() {
+            output.innerHTML = calcTriArea(side1, side2, side3);
+        }
+
+        // call outputFn
+        outputFn();
+
+    </script>
+</body>
+
+</html>
