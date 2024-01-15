@@ -5,30 +5,27 @@ Write a JavaScript program to find the area of a triangle where three sides are 
 
 */
 
-// var
+// Variable declarations
 const output = document.querySelector("#output");
 const side1 = 5;
 const side2 = 6;
 const side3 = 7;
-let semiperi;
-let s;
-let area;
 
-// fn
-function findSemiPeri(a, b, c) {
-  semiperi = (a + b + c) / 2;
-  return semiperi;
+// Function to calculate semi-perimeter
+function calculateSemiPerimeter(a, b, c) {
+  return (a + b + c) / 2;
 }
 
-function calcTriArea(a, b, c) {
-  s = findSemiPeri(a, b, c);
-  area = Math.sqrt(s * (s - a) * (s - b) * (s - c));
-  return area;
+// Function to calculate triangle area using Heron's formula
+function calculateTriangleArea(a, b, c) {
+  const s = calculateSemiPerimeter(a, b, c);
+  return Math.sqrt(s * (s - a) * (s - b) * (s - c));
 }
 
-function outputFn() {
-  output.innerHTML = calcTriArea(side1, side2, side3);
+// Function to display the calculated area
+function displayTriangleArea() {
+  output.innerHTML = calculateTriangleArea(side1, side2, side3);
 }
 
-// call outputFn
-outputFn();
+// Call the function to display the result
+displayTriangleArea();
